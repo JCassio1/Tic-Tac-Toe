@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        //Address where realm data is saved (can only be seen on simulator)
         print(Realm.Configuration.defaultConfiguration.fileURL)
         
         

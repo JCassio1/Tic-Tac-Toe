@@ -266,6 +266,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Acv-Rq-Drb"/>
                     </view>
+                    <connections>
+                        <outlet property="rankingTable" destination="zfM-ed-aoR" id="zZq-dB-6EZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCa-b2-LKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
