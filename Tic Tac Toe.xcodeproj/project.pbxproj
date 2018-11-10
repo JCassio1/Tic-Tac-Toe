@@ -24,6 +24,7 @@
 		F2B255B5219511530014ED6B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B255B4219511530014ED6B /* SettingsViewController.swift */; };
 		F2B255B7219514C40014ED6B /* ScoreboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B255B6219514C40014ED6B /* ScoreboardViewController.swift */; };
 		F2B255BD21951CD70014ED6B /* screenTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2B255BC21951CD60014ED6B /* screenTap.wav */; };
+		F2DBF5132195F15000C9DA29 /* scoreboardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBF5122195F15000C9DA29 /* scoreboardDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		F2B255B4219511530014ED6B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F2B255B6219514C40014ED6B /* ScoreboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardViewController.swift; sourceTree = "<group>"; };
 		F2B255BC21951CD60014ED6B /* screenTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = screenTap.wav; sourceTree = "<group>"; };
+		F2DBF5122195F15000C9DA29 /* scoreboardDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scoreboardDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 		F24A313421939E250093F86B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F2DBF5122195F15000C9DA29 /* scoreboardDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				F2B255B7219514C40014ED6B /* ScoreboardViewController.swift in Sources */,
 				F2270D392194F99B001FFC9E /* StartupViewController.swift in Sources */,
 				F24A310921925F3C0093F86B /* ViewController.swift in Sources */,
+				F2DBF5132195F15000C9DA29 /* scoreboardDataModel.swift in Sources */,
 				F2270D3B2194FAC5001FFC9E /* swift+gif.swift in Sources */,
 				F24A313A21939F310093F86B /* NamesViewController.swift in Sources */,
 				F24A310721925F3C0093F86B /* AppDelegate.swift in Sources */,

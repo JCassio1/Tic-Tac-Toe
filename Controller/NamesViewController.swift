@@ -40,7 +40,6 @@ class NamesViewController: UIViewController {
         self.playerTwo = PlayerTwoField.text ?? "Player two"
         
         performSegue(withIdentifier: "name", sender: self)
-        
 
     }
     

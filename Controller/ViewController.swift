@@ -8,8 +8,11 @@
 
 import UIKit
 import AVFoundation
+import RealmSwift
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
+    
+    let realm = try! Realm()
     
     var audioPlayer: AVAudioPlayer!
     var soundSetting = ""
@@ -100,20 +103,25 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                 {
                     if playerOneName.isEmpty == false {
                         gameTopLabel.text = "\(playerOneName) won!"
+                        playerData(rank: 5, name: playerOneName, score: 500)
                     }
                     
                     else{
                         gameTopLabel.text = "Player 1 won!"
+                        playerData(rank: 8, name: "Player 1", score: 500)
                     }
+                    
                 }
                 
                 else{
                     if playerTwoName.isEmpty == false {
                         gameTopLabel.text = "\(playerTwoName) won!"
+                        playerData(rank: 10, name: playerTwoName, score: 600)
                     }
                         
                     else{
                         gameTopLabel.text = "Player 2 won!"
+                        playerData(rank: 10, name: "player 2", score: 600)
                     }
                 }
                 
@@ -178,5 +186,31 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         audioPlayer.play()
     }
+    
+    
+    func savePlayers(player: scoreboardDataModel){
+        
+        do{
+            try realm.write{
+                realm.add(player)}
+        }
+        
+        catch{
+            print("Error saving player!")
+        }
+        
+        print("Saved a player to database")
+    }
+    
+    func playerData(rank: Int, name: String, score: Int){
+        
+        let newplayer = scoreboardDataModel()
+        newplayer.rank = rank
+        newplayer.name = name
+        newplayer.scores = score
+        
+        self.savePlayers(player: newplayer)
+    }
+    
 }
 
