@@ -17,6 +17,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var audioPlayer: AVAudioPlayer!
     var soundSetting = ""
     
+    var randomScore = 0
+    
     var playerOneName = ""
     var playerTwoName = ""
     var playerPlaying = 1 //current active player
@@ -53,9 +55,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         soundSetting = checkSound()
         
         if soundSetting == "On"{
-        playSound()
+            playSound()
             
-            print("Play() Sound setting is \(soundSetting)")
+            print("Sound setting is \(soundSetting)")
         }
         
         else {
@@ -97,18 +99,21 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             
             if (gameStatus[possibilities[0]] != 0 && gameStatus[possibilities[0]] == gameStatus[possibilities[1]] && gameStatus[possibilities[1]] == gameStatus[possibilities[2]])
             {
+                
+                randomScore = Int.random(in: 100 ..< 800)
+                
                 activeGame = false
                 
                 if gameStatus[possibilities[0]] == 1
                 {
                     if playerOneName.isEmpty == false {
                         gameTopLabel.text = "\(playerOneName) won!"
-                        playerData(rank: 5, name: playerOneName, score: 500)
+                        playerData(name: playerOneName, score: randomScore)
                     }
                     
                     else{
                         gameTopLabel.text = "Player 1 won!"
-                        playerData(rank: 8, name: "Player 1", score: 500)
+                        playerData(name: "player 1", score: randomScore)
                     }
                     
                 }
@@ -116,12 +121,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                 else{
                     if playerTwoName.isEmpty == false {
                         gameTopLabel.text = "\(playerTwoName) won!"
-                        playerData(rank: 10, name: playerTwoName, score: 600)
+                        playerData(name: playerTwoName, score: randomScore)
                     }
                         
                     else{
                         gameTopLabel.text = "Player 2 won!"
-                        playerData(rank: 10, name: "player 2", score: 600)
+                        playerData(name: "player 2", score: randomScore)
                     }
                 }
                 
@@ -202,10 +207,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         print("Saved a player to database")
     }
     
-    func playerData(rank: Int, name: String, score: Int){
+    func playerData(name: String, score: Int){
         
         let newplayer = scoreboardDataModel()
-        newplayer.rank = rank
         newplayer.name = name
         newplayer.scores = score
         

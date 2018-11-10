@@ -47,7 +47,7 @@ class ScoreboardViewController: UIViewController, UITableViewDelegate, UITableVi
             let playerRank = indexPath.row + 1
 
             
-            cell.textLabel?.text = "\(playerRank)                          \(allPlayers.name)                         \(allPlayers.scores)"
+            cell.textLabel?.text = "\(playerRank)                      \(allPlayers.name)                         \(allPlayers.scores)"
         }
 
         
@@ -57,9 +57,9 @@ class ScoreboardViewController: UIViewController, UITableViewDelegate, UITableVi
 
     func loadRankings(){
         
-        players = realm.objects(scoreboardDataModel.self)
+            players = realm.objects(scoreboardDataModel.self).sorted(byKeyPath: "scores", ascending: false)
 
-        rankingTable.reloadData()
+            rankingTable.reloadData()
     }
 
 }

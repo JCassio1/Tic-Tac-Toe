@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    var soundOn: String = "On"
+    var soundOn: String = ""
     
     
     //Persisting user sound setting
@@ -18,6 +18,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        soundOn = "On"
     }
     
     @IBOutlet weak var testLabel: UILabel!

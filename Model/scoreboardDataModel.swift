@@ -11,7 +11,7 @@ import RealmSwift
 
 class scoreboardDataModel: Object{
     
-    @objc dynamic var rank: Int = 0
+    //@objc dynamic var rank: Int = 0
     @objc dynamic var name : String = ""
     @objc dynamic var scores: Int = 0
 }
