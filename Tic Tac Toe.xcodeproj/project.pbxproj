@@ -28,6 +28,8 @@
 		F2DBF5192197CFC200C9DA29 /* winning.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2DBF5182197CFC200C9DA29 /* winning.wav */; };
 		F2DBF51B2197DD4800C9DA29 /* SinglePlayerNamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBF51A2197DD4800C9DA29 /* SinglePlayerNamesViewController.swift */; };
 		F2DBF51D219867DD00C9DA29 /* sharingPlayerStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBF51C219867DD00C9DA29 /* sharingPlayerStatsViewController.swift */; };
+		F2DBF51F21987C8600C9DA29 /* dataTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBF51E21987C8600C9DA29 /* dataTransfer.swift */; };
+		F2DBF52121987DA200C9DA29 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBF52021987DA200C9DA29 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,9 @@
 		F2DBF5182197CFC200C9DA29 /* winning.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = winning.wav; sourceTree = "<group>"; };
 		F2DBF51A2197DD4800C9DA29 /* SinglePlayerNamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerNamesViewController.swift; sourceTree = "<group>"; };
 		F2DBF51C219867DD00C9DA29 /* sharingPlayerStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharingPlayerStatsViewController.swift; sourceTree = "<group>"; };
+		F2DBF51E21987C8600C9DA29 /* dataTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataTransfer.swift; sourceTree = "<group>"; };
+		F2DBF52021987DA200C9DA29 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F2DBF52221987E9900C9DA29 /* Tic Tac Toe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tic Tac Toe.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +168,7 @@
 		F24A310521925F3C0093F86B /* Tic Tac Toe */ = {
 			isa = PBXGroup;
 			children = (
+				F2DBF52221987E9900C9DA29 /* Tic Tac Toe.entitlements */,
 				F24A310D21925F3E0093F86B /* Assets.xcassets */,
 				F24A311221925F3E0093F86B /* Info.plist */,
 			);
@@ -190,7 +196,9 @@
 		F24A313421939E250093F86B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F2DBF52021987DA200C9DA29 /* DataManager.swift */,
 				F2DBF5122195F15000C9DA29 /* scoreboardDataModel.swift */,
+				F2DBF51E21987C8600C9DA29 /* dataTransfer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +310,14 @@
 				TargetAttributes = {
 					F24A310221925F3C0093F86B = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					F24A311621925F3E0093F86B = {
 						CreatedOnToolsVersion = 10.1;
@@ -462,8 +478,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2DBF51D219867DD00C9DA29 /* sharingPlayerStatsViewController.swift in Sources */,
+				F2DBF52121987DA200C9DA29 /* DataManager.swift in Sources */,
 				F2B255B7219514C40014ED6B /* ScoreboardViewController.swift in Sources */,
 				F2DBF51B2197DD4800C9DA29 /* SinglePlayerNamesViewController.swift in Sources */,
+				F2DBF51F21987C8600C9DA29 /* dataTransfer.swift in Sources */,
 				F2270D392194F99B001FFC9E /* StartupViewController.swift in Sources */,
 				F24A310921925F3C0093F86B /* ViewController.swift in Sources */,
 				F2DBF5132195F15000C9DA29 /* scoreboardDataModel.swift in Sources */,
@@ -646,6 +664,7 @@
 			baseConfigurationReference = A34E6067B9F07D3FA5E98ADB /* Pods-Tic Tac Toe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Tic Tac Toe/Tic Tac Toe.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W9GHU8Z389;
 				INFOPLIST_FILE = "Tic Tac Toe/Info.plist";
@@ -665,6 +684,7 @@
 			baseConfigurationReference = 55C2A8B2A2A3682D5A8D3AE1 /* Pods-Tic Tac Toe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Tic Tac Toe/Tic Tac Toe.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W9GHU8Z389;
 				INFOPLIST_FILE = "Tic Tac Toe/Info.plist";

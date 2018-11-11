@@ -17,11 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        //Address where realm data is saved (can only be seen on simulator)
+        // MARK: Realm Data Address
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         
-        //Initializing Realm database
+        // MARK: Initializing Realm database
         do{
             let realm = try Realm()
         } catch {
@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         
-        //Printing path for userDefaults data
+        // MARK: Printing path for userDefaults data
         print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String)
         
         return true
@@ -57,7 +57,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
