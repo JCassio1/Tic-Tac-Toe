@@ -13,7 +13,6 @@ import RealmSwift
 class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     let realm = try! Realm()
-    let defaults = UserDefaults.standard
     
     var audioPlayer: AVAudioPlayer!
     var soundSetting: Bool = true
@@ -56,7 +55,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         soundSetting = checkSound()
         
         if soundSetting == true {
-            playSound()
+            playSound(soundname: "screenTap")
             
             print("Sound setting is \(soundSetting)")
         }
@@ -117,6 +116,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                         playerData(name: "player 1", score: randomScore)
                     }
                     
+                    if soundSetting == true {
+                    playSound(soundname: "winning")
+                    }
+                    
                 }
                 
                 else{
@@ -128,6 +131,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                     else{
                         gameTopLabel.text = "Player 2 won!"
                         playerData(name: "player 2", score: randomScore)
+                    }
+                    
+                    if soundSetting == true {
+                        playSound(soundname: "winning")
                     }
                 }
                 
@@ -179,9 +186,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
-    func playSound(){
+    func playSound(soundname: String){
         
-        let soundURL = Bundle.main.url(forResource: "screenTap", withExtension: "wav")
+        let soundURL = Bundle.main.url(forResource: soundname, withExtension: "wav")
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
         }
@@ -216,6 +223,5 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         self.savePlayers(player: newplayer)
     }
-    
 }
 

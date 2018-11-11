@@ -18,14 +18,16 @@ class NamesViewController: UIViewController {
         
         playerOneField.delegate = self as? UITextFieldDelegate
         playerOneField.delegate = self as? UITextFieldDelegate
+        self.getPlayerButton.layer.borderColor = UIColor.black.cgColor
 
     }
     
     
     @IBOutlet weak var playerOneField: UITextField!
-    
   
     @IBOutlet weak var PlayerTwoField: UITextField!
+    
+    @IBOutlet weak var getPlayerButton: UIButton!
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         playerOneField.resignFirstResponder()
@@ -56,7 +58,7 @@ extension ViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true
+        return false
     }
 }
 

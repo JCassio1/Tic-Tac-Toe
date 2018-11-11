@@ -25,6 +25,9 @@
 		F2B255B7219514C40014ED6B /* ScoreboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B255B6219514C40014ED6B /* ScoreboardViewController.swift */; };
 		F2B255BD21951CD70014ED6B /* screenTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2B255BC21951CD60014ED6B /* screenTap.wav */; };
 		F2DBF5132195F15000C9DA29 /* scoreboardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBF5122195F15000C9DA29 /* scoreboardDataModel.swift */; };
+		F2DBF5192197CFC200C9DA29 /* winning.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2DBF5182197CFC200C9DA29 /* winning.wav */; };
+		F2DBF51B2197DD4800C9DA29 /* SinglePlayerNamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBF51A2197DD4800C9DA29 /* SinglePlayerNamesViewController.swift */; };
+		F2DBF51D219867DD00C9DA29 /* sharingPlayerStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBF51C219867DD00C9DA29 /* sharingPlayerStatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		F2B255B6219514C40014ED6B /* ScoreboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardViewController.swift; sourceTree = "<group>"; };
 		F2B255BC21951CD60014ED6B /* screenTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = screenTap.wav; sourceTree = "<group>"; };
 		F2DBF5122195F15000C9DA29 /* scoreboardDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scoreboardDataModel.swift; sourceTree = "<group>"; };
+		F2DBF5182197CFC200C9DA29 /* winning.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = winning.wav; sourceTree = "<group>"; };
+		F2DBF51A2197DD4800C9DA29 /* SinglePlayerNamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerNamesViewController.swift; sourceTree = "<group>"; };
+		F2DBF51C219867DD00C9DA29 /* sharingPlayerStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharingPlayerStatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,8 @@
 				F2B255B2219501A70014ED6B /* tictacgif.gif */,
 				F2B255B4219511530014ED6B /* SettingsViewController.swift */,
 				F2B255B6219514C40014ED6B /* ScoreboardViewController.swift */,
+				F2DBF51A2197DD4800C9DA29 /* SinglePlayerNamesViewController.swift */,
+				F2DBF51C219867DD00C9DA29 /* sharingPlayerStatsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -217,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				F2B255BC21951CD60014ED6B /* screenTap.wav */,
+				F2DBF5182197CFC200C9DA29 /* winning.wav */,
 			);
 			path = "Sound Files";
 			sourceTree = "<group>";
@@ -332,6 +341,7 @@
 				F24A311121925F3E0093F86B /* LaunchScreen.storyboard in Resources */,
 				F24A310E21925F3E0093F86B /* Assets.xcassets in Resources */,
 				F24A310C21925F3C0093F86B /* Main.storyboard in Resources */,
+				F2DBF5192197CFC200C9DA29 /* winning.wav in Resources */,
 				F2B255B3219501A70014ED6B /* tictacgif.gif in Resources */,
 				F2B255BD21951CD70014ED6B /* screenTap.wav in Resources */,
 			);
@@ -451,7 +461,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2DBF51D219867DD00C9DA29 /* sharingPlayerStatsViewController.swift in Sources */,
 				F2B255B7219514C40014ED6B /* ScoreboardViewController.swift in Sources */,
+				F2DBF51B2197DD4800C9DA29 /* SinglePlayerNamesViewController.swift in Sources */,
 				F2270D392194F99B001FFC9E /* StartupViewController.swift in Sources */,
 				F24A310921925F3C0093F86B /* ViewController.swift in Sources */,
 				F2DBF5132195F15000C9DA29 /* scoreboardDataModel.swift in Sources */,

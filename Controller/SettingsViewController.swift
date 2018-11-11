@@ -38,6 +38,7 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    //First check userDeafaults for button position
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
         switchState?.isOn =  UserDefaults.standard.bool(forKey: "soundOption")
