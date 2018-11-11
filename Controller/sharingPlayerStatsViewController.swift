@@ -17,6 +17,8 @@ class sharingPlayerStatsViewController: UIViewController, MCSessionDelegate, MCB
     var mcSession:MCSession!
     var mcAdvertiserAssistant:MCAdvertiserAssistant!
     
+    var hosting: Bool!
+    
     
     @IBOutlet weak var otherPlayerName: UILabel!
     @IBOutlet weak var OtherPlayerHighestScore: UILabel!
@@ -25,6 +27,8 @@ class sharingPlayerStatsViewController: UIViewController, MCSessionDelegate, MCB
         super.viewDidLoad()
         
         setupConnectivity()
+        hosting = false
+        mcSession.disconnect()
     }
     
     func setupConnectivity(){
@@ -35,7 +39,7 @@ class sharingPlayerStatsViewController: UIViewController, MCSessionDelegate, MCB
     }
     
     func shareRequest(){
-        let todoItem = gamePlayersInfo.capacity
+         //let todoItem =
             //sendPlayerStat(todoItem)
     }
     
@@ -59,22 +63,24 @@ class sharingPlayerStatsViewController: UIViewController, MCSessionDelegate, MCB
     }
     
     
-    
     @IBAction func shareButton(_ sender: Any) {
         
         //Actions sheet displays a list of options vertically (popup)
         
+        if mcSession.connectedPeers.count == 0 && hosting == false{
          let actionSheet = UIAlertController(title: "Stats Sharing", message: "Do you wish to share your stats or see from others?", preferredStyle: .actionSheet)
         
+        // MARK: Hosting Session
         actionSheet.addAction(UIAlertAction(title: "Share My Stats", style: .default, handler: { (action:UIAlertAction) in
             
-            self.mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "ba-td", discoveryInfo: nil, session: self.mcSession)
+            self.mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "my-tictac", discoveryInfo: nil, session: self.mcSession)
             self.mcAdvertiserAssistant.start()
-            
+            self.hosting = true
         }))
         
+        // MARK: JOINING Session
         actionSheet.addAction(UIAlertAction(title: "See From Others", style: .default, handler: { (action:UIAlertAction) in
-            let mcBrowser = MCBrowserViewController(serviceType: "ba-td", session: self.mcSession)
+            let mcBrowser = MCBrowserViewController(serviceType: "my-tictac", session: self.mcSession)
             mcBrowser.delegate = self
             self.present(mcBrowser, animated: true, completion: nil)
         }))
@@ -82,6 +88,34 @@ class sharingPlayerStatsViewController: UIViewController, MCSessionDelegate, MCB
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(actionSheet, animated: true, completion: nil)
+        }
+        
+        else if mcSession.connectedPeers.count == 0 && hosting == true
+        {
+            let waitActionSheet = UIAlertController(title: "Waiting...", message: "Waiting for other devices to connect", preferredStyle: .actionSheet)
+            
+            waitActionSheet.addAction(UIAlertAction(title: "Disconnect", style: .destructive, handler: { (action) in
+                self.mcSession.disconnect()
+                self.hosting = false
+            }))
+            
+            waitActionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            self.present(waitActionSheet, animated: true, completion: nil)
+        }
+        
+        else{
+            
+            let disconnectActionSheet = UIAlertController(title: "Are you sure you want to disconnect?", message: nil, preferredStyle: .actionSheet)
+            
+            disconnectActionSheet.addAction(UIAlertAction(title: "Disconnect", style: .cancel, handler: { (action:UIAlertAction) in
+                self.mcSession.disconnect()
+            }))
+            
+            disconnectActionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(disconnectActionSheet, animated: true, completion: nil)
+        }
+        
     }
     
     
