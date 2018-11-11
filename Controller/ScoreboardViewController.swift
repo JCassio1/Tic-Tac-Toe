@@ -40,6 +40,8 @@ class ScoreboardViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
         
+        cell.textLabel?.textAlignment = .center
+        
         if let allPlayers = players?[indexPath.row]{
 
             
@@ -47,7 +49,7 @@ class ScoreboardViewController: UIViewController, UITableViewDelegate, UITableVi
             let playerRank = indexPath.row + 1
 
             
-            cell.textLabel?.text = "\(playerRank)                      \(allPlayers.name)                         \(allPlayers.scores)"
+            cell.textLabel?.text = "\(playerRank)                      \(allPlayers.name)                      \(allPlayers.scores)"
         }
 
         

@@ -13,9 +13,10 @@ import RealmSwift
 class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     let realm = try! Realm()
+    let defaults = UserDefaults.standard
     
     var audioPlayer: AVAudioPlayer!
-    var soundSetting = ""
+    var soundSetting: Bool = true
     
     var randomScore = 0
     
@@ -40,10 +41,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     
     //Check if user set sound On or Off
-    func checkSound() -> String {
-        let sound = UserDefaults.standard.string(forKey: "soundOption")
+    func checkSound() -> Bool {
+        let sound: Bool = UserDefaults.standard.bool(forKey: "soundOption") ?? true
         
-        return sound!
+        return sound
     }
     
     
@@ -54,7 +55,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         soundSetting = checkSound()
         
-        if soundSetting == "On"{
+        if soundSetting == true {
             playSound()
             
             print("Sound setting is \(soundSetting)")
@@ -204,7 +205,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             print("Error saving player!")
         }
         
-        print("Saved a player to database")
+        print("Added player to scoreboard")
     }
     
     func playerData(name: String, score: Int){
