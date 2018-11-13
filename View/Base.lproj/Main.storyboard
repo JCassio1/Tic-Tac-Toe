@@ -365,6 +365,88 @@
             </objects>
             <point key="canvasLocation" x="-831" y="1058"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="83h-m5-2rd">
+            <objects>
+                <viewController id="ZHW-an-fLL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tay-s8-5h0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you wish to share stats?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xi2-Zz-7nN">
+                                <rect key="frame" x="36.5" y="57" width="302" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="302" id="FPS-h9-F8D"/>
+                                    <constraint firstAttribute="height" constant="23" id="n8R-CA-My6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaJ-Wr-tqp">
+                                <rect key="frame" x="25" y="206" width="325" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="AGL-lx-exj"/>
+                                    <constraint firstAttribute="height" constant="50" id="dDG-Aq-o92"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="Peer Connection">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="v7c-i8-SB8" kind="show" id="0Mr-2J-EkT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKm-8m-JWz">
+                                <rect key="frame" x="25" y="578" width="325" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="4MI-TX-DOc"/>
+                                    <constraint firstAttribute="height" constant="50" id="Bb8-cy-ffe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZMV-5U-mfb" kind="show" id="klP-fo-TLv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIn-0Z-kxw">
+                                <rect key="frame" x="25" y="293" width="325" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SF9-ID-hgE"/>
+                                    <constraint firstAttribute="width" constant="325" id="ac6-mS-Ex4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="QR Code">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nzd-3z-Yil" kind="show" id="Qi6-wO-DQW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tIn-0Z-kxw" firstAttribute="centerX" secondItem="tay-s8-5h0" secondAttribute="centerX" id="9F4-tP-n2x"/>
+                            <constraint firstItem="pKm-8m-JWz" firstAttribute="centerY" secondItem="tay-s8-5h0" secondAttribute="centerY" constant="269.5" id="Cde-Lz-J5p"/>
+                            <constraint firstItem="Xi2-Zz-7nN" firstAttribute="centerY" secondItem="tay-s8-5h0" secondAttribute="centerY" constant="-265" id="FxA-Xx-nap"/>
+                            <constraint firstItem="zaJ-Wr-tqp" firstAttribute="centerY" secondItem="tay-s8-5h0" secondAttribute="centerY" constant="-102.5" id="Gda-Ou-99F"/>
+                            <constraint firstItem="zaJ-Wr-tqp" firstAttribute="centerX" secondItem="tay-s8-5h0" secondAttribute="centerX" id="RW7-9L-Srt"/>
+                            <constraint firstItem="Xi2-Zz-7nN" firstAttribute="centerX" secondItem="tay-s8-5h0" secondAttribute="centerX" id="X3z-Zl-3h8"/>
+                            <constraint firstItem="tIn-0Z-kxw" firstAttribute="centerY" secondItem="tay-s8-5h0" secondAttribute="centerY" constant="-15.5" id="f5N-Op-1CO"/>
+                            <constraint firstItem="pKm-8m-JWz" firstAttribute="centerX" secondItem="tay-s8-5h0" secondAttribute="centerX" id="oWI-Dc-uHW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tJQ-Mh-rXg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PwY-DE-RHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="1057"/>
+        </scene>
         <!--Sharing Player Stats View Controller-->
         <scene sceneID="meS-kP-hIu">
             <objects>
@@ -403,7 +485,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ZMV-5U-mfb" kind="show" id="szG-QA-8uJ"/>
+                                            <segue destination="ZHW-an-fLL" kind="show" id="Bi3-re-U7Q"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -600,7 +682,113 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7f-tH-sHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181.59999999999999" y="1057.4212893553224"/>
+            <point key="canvasLocation" x="1505" y="724"/>
+        </scene>
+        <!--Code View Controller-->
+        <scene sceneID="mHg-NS-gY3">
+            <objects>
+                <viewController id="nzd-3z-Yil" customClass="QRCodeViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RMB-LZ-Joh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeJ-zB-xjI">
+                                <rect key="frame" x="25" y="569" width="325" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="8CY-pa-mFT"/>
+                                    <constraint firstAttribute="height" constant="50" id="F05-ZF-ahM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZHW-an-fLL" kind="show" id="us0-hX-d0N"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Idg-Qi-1zA">
+                                <rect key="frame" x="62.5" y="142" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="8kM-tp-ecN"/>
+                                    <constraint firstAttribute="height" constant="250" id="blD-9h-rH6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfa-BO-G2h">
+                                <rect key="frame" x="102" y="47" width="171" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="kmN-91-R0I"/>
+                                    <constraint firstAttribute="height" constant="27" id="xDn-EE-BCX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point Camera here to scan QR Code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySk-vu-rJp">
+                                <rect key="frame" x="50" y="100" width="275" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="oSw-YC-qhi"/>
+                                    <constraint firstAttribute="height" constant="21" id="wr7-yP-sja"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHS-LD-gzw">
+                                <rect key="frame" x="25" y="432" width="325" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="DZV-54-KbM"/>
+                                    <constraint firstAttribute="height" constant="50" id="PiW-Ii-f94"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="Generate Code">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateCode:" destination="nzd-3z-Yil" eventType="touchUpInside" id="fZY-Cq-mcx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJf-SK-yUC">
+                                <rect key="frame" x="25" y="500" width="325" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="d0J-OK-b8J"/>
+                                    <constraint firstAttribute="width" constant="325" id="hd3-qM-Rhx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="Scan another code">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanCode:" destination="nzd-3z-Yil" eventType="touchUpInside" id="cnJ-Yl-dd8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oeJ-zB-xjI" firstAttribute="centerY" secondItem="RMB-LZ-Joh" secondAttribute="centerY" constant="260.5" id="ByK-tb-g2Q"/>
+                            <constraint firstItem="ySk-vu-rJp" firstAttribute="centerY" secondItem="RMB-LZ-Joh" secondAttribute="centerY" constant="-223" id="HFE-kj-jln"/>
+                            <constraint firstItem="oeJ-zB-xjI" firstAttribute="centerX" secondItem="RMB-LZ-Joh" secondAttribute="centerX" id="HIy-zQ-iL4"/>
+                            <constraint firstItem="Idg-Qi-1zA" firstAttribute="centerX" secondItem="RMB-LZ-Joh" secondAttribute="centerX" id="Ig0-KK-lfz"/>
+                            <constraint firstItem="xHS-LD-gzw" firstAttribute="centerX" secondItem="RMB-LZ-Joh" secondAttribute="centerX" id="PKl-yt-3ym"/>
+                            <constraint firstItem="ySk-vu-rJp" firstAttribute="centerX" secondItem="RMB-LZ-Joh" secondAttribute="centerX" id="Vnf-ga-gfW"/>
+                            <constraint firstItem="xHS-LD-gzw" firstAttribute="centerY" secondItem="RMB-LZ-Joh" secondAttribute="centerY" constant="123.5" id="WJe-pO-4RF"/>
+                            <constraint firstItem="mfa-BO-G2h" firstAttribute="centerX" secondItem="RMB-LZ-Joh" secondAttribute="centerX" id="a2G-Sr-TIX"/>
+                            <constraint firstItem="mfa-BO-G2h" firstAttribute="centerY" secondItem="RMB-LZ-Joh" secondAttribute="centerY" constant="-273" id="efy-9p-48a"/>
+                            <constraint firstItem="mJf-SK-yUC" firstAttribute="centerY" secondItem="RMB-LZ-Joh" secondAttribute="centerY" constant="191.5" id="hBF-Ti-Elk"/>
+                            <constraint firstItem="mJf-SK-yUC" firstAttribute="centerX" secondItem="RMB-LZ-Joh" secondAttribute="centerX" id="pKs-h5-OH1"/>
+                            <constraint firstItem="Idg-Qi-1zA" firstAttribute="centerY" secondItem="RMB-LZ-Joh" secondAttribute="centerY" constant="-66.5" id="z9t-Y6-1aW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cy8-Dd-jJP"/>
+                    </view>
+                    <connections>
+                        <outlet property="qrCodeImage" destination="Idg-Qi-1zA" id="xdX-gT-TEK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jrx-HF-Dx0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504.8" y="1568.3658170914543"/>
         </scene>
         <!--Names View Controller-->
         <scene sceneID="Qaa-hp-cKs">
@@ -673,7 +861,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="v7c-i8-SB8" kind="show" id="t0i-Eu-tJm"/>
+                                            <segue destination="ZHW-an-fLL" kind="show" id="ohw-Lf-4NE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="nextButt" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lal-EG-qKW">
@@ -950,7 +1138,8 @@
         <image name="Board" width="539" height="534"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="szG-QA-8uJ"/>
+        <segue reference="klP-fo-TLv"/>
+        <segue reference="us0-hX-d0N"/>
         <segue reference="7hn-0j-nQL"/>
     </inferredMetricsTieBreakers>
 </document>

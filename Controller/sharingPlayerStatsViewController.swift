@@ -215,13 +215,6 @@ class sharingPlayerStatsViewController: UIViewController, MCSessionDelegate, MCB
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         do {
-//            let playerInfo = try JSONDecoder().decode(dataTransfer.self, from: data)
-//            DataManager.save(playerInfo, with: playerInfo.playerIdentifier.uuidString)
-//
-//            DispatchQueue.main.async {
-//                self.gamePlayersInfo.append(playerInfo)
-//            }
-            
             DispatchQueue.main.async {
                 
                 self.messageReceived = NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue)! as String

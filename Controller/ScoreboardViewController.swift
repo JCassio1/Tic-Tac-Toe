@@ -35,19 +35,14 @@ class ScoreboardViewController: UIViewController, UITableViewDelegate, UITableVi
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-//        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
-//        cell.textLabel?.text = scores[indexPath.row]
-        
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
         
         cell.textLabel?.textAlignment = .center
         
         if let allPlayers = players?[indexPath.row]{
-
             
             //Obtain row number for scoreboard
             let playerRank = indexPath.row + 1
-
             
             cell.textLabel?.text = "\(playerRank)                      \(allPlayers.name)                      \(allPlayers.scores)"
         }
