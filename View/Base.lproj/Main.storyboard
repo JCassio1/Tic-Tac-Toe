@@ -104,7 +104,7 @@
         <!--Startup View Controller-->
         <scene sceneID="8XM-1K-Geh">
             <objects>
-                <viewController id="QmE-4v-ocQ" customClass="StartupViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QmE-4v-ocQ" customClass="StartupViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kgH-6o-MVR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -371,7 +371,7 @@
         <!--View Controller-->
         <scene sceneID="83h-m5-2rd">
             <objects>
-                <viewController id="ZHW-an-fLL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="shareStats" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZHW-an-fLL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tay-s8-5h0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -690,7 +690,7 @@
         <!--Code View Controller-->
         <scene sceneID="mHg-NS-gY3">
             <objects>
-                <viewController id="nzd-3z-Yil" customClass="QRCodeViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="qrCodeGenerator" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nzd-3z-Yil" customClass="QRCodeViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RMB-LZ-Joh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1334,8 +1334,8 @@
         <image name="Board" width="539" height="534"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="klP-fo-TLv"/>
-        <segue reference="6X1-TY-5gI"/>
+        <segue reference="xjB-b1-OqC"/>
+        <segue reference="Qi6-wO-DQW"/>
         <segue reference="us0-hX-d0N"/>
         <segue reference="WUx-NG-qap"/>
     </inferredMetricsTieBreakers>

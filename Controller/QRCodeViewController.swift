@@ -43,7 +43,7 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         self.playerScore = retrieveDataFromDatabase(dataToRetrieve: "score")
         self.deviceUUID = UIDevice.current.name
         
-        messageToScan = "\(playerName):\(playerScore):\(deviceUUID)"
+        messageToScan = "tictactoe:\(playerName):\(playerScore):\(deviceUUID)"
         
         let data = messageToScan.data(using: .ascii, allowLossyConversion: false)
         
@@ -58,10 +58,7 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
        qrCodeImage.image = image
     }
     
-    
-    // MARK: User scans QR Code from own device
-    @IBAction func scanCode(_ sender: Any) {
-        
+    func openingCamera(){
         //Creating session
         let session = AVCaptureSession()
         
@@ -97,6 +94,12 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         session.startRunning()
     }
     
+    // MARK: User scans QR Code from own device
+    @IBAction func scanCode(_ sender: Any) {
+        
+        openingCamera()
+    }
+    
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if metadataObjects != nil && metadataObjects.count != 0{
@@ -106,13 +109,15 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 {
                     //object.stringValue is the message within the QR Code [object.stringValue]
 
-                    self.receivedData = object.stringValue ?? "no data received:no data received:no data received"
+                    self.receivedData = object.stringValue ?? "no data received:no data received:no data received:no data received"
                     
                     let splits = self.receivedData.components(separatedBy: ":")
                     
-                    self.scannedPlayerOne = splits[0]
-                    self.scannedPlayerScore = splits[1]
-                    self.scannedDeviceName = splits[2]
+                    if splits[0] == "tictactoe"{
+                    
+                    self.scannedPlayerOne = splits[1]
+                    self.scannedPlayerScore = splits[2]
+                    self.scannedDeviceName = splits[3]
                     
                     self.defaults.set(self.scannedPlayerOne, forKey: "PlayerNameScanned")
                     self.defaults.set(self.scannedPlayerScore, forKey: "PlayerScoreScanned")
@@ -124,8 +129,24 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                     {
                         present(vc, animated: true, completion: nil)
                     }
+                    }
                     
-                    
+                    else{
+                        
+                        let alert = UIAlertController(title: "Not Valid QR Code", message: "Would you like to try scanning again?", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+                        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { action in
+                            
+                            if let optionsView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "startView") as? StartupViewController
+                            {
+                                self.present(optionsView, animated: true, completion: nil)
+                            }
+                            
+                        }))
+                        
+                        self.present(alert, animated: true)
+                    }
                 }
             }
         }
