@@ -21,6 +21,7 @@
 		F24A312721925F3E0093F86B /* Tic_Tac_ToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24A312621925F3E0093F86B /* Tic_Tac_ToeUITests.swift */; };
 		F24A313A21939F310093F86B /* NamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24A313921939F310093F86B /* NamesViewController.swift */; };
 		F25E0CCA219A467E0052B8E6 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25E0CC9219A467E0052B8E6 /* QRCodeViewController.swift */; };
+		F25E0CCC219AD10A0052B8E6 /* QRCodeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25E0CCB219AD10A0052B8E6 /* QRCodeDataViewController.swift */; };
 		F2B255B3219501A70014ED6B /* tictacgif.gif in Resources */ = {isa = PBXBuildFile; fileRef = F2B255B2219501A70014ED6B /* tictacgif.gif */; };
 		F2B255B5219511530014ED6B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B255B4219511530014ED6B /* SettingsViewController.swift */; };
 		F2B255B7219514C40014ED6B /* ScoreboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B255B6219514C40014ED6B /* ScoreboardViewController.swift */; };
@@ -77,6 +78,7 @@
 		F24A312821925F3E0093F86B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24A313921939F310093F86B /* NamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesViewController.swift; sourceTree = "<group>"; };
 		F25E0CC9219A467E0052B8E6 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		F25E0CCB219AD10A0052B8E6 /* QRCodeDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeDataViewController.swift; sourceTree = "<group>"; };
 		F2B255B2219501A70014ED6B /* tictacgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tictacgif.gif; sourceTree = "<group>"; };
 		F2B255B4219511530014ED6B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F2B255B6219514C40014ED6B /* ScoreboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				F2DBF51A2197DD4800C9DA29 /* SinglePlayerNamesViewController.swift */,
 				F2DBF51C219867DD00C9DA29 /* sharingPlayerStatsViewController.swift */,
 				F25E0CC9219A467E0052B8E6 /* QRCodeViewController.swift */,
+				F25E0CCB219AD10A0052B8E6 /* QRCodeDataViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				F2270D3B2194FAC5001FFC9E /* swift+gif.swift in Sources */,
 				F24A313A21939F310093F86B /* NamesViewController.swift in Sources */,
 				F24A310721925F3C0093F86B /* AppDelegate.swift in Sources */,
+				F25E0CCC219AD10A0052B8E6 /* QRCodeDataViewController.swift in Sources */,
 				F2B255B5219511530014ED6B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

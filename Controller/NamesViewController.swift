@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NamesViewController: UIViewController {
+class NamesViewController: UIViewController, UITextFieldDelegate {
 
     var playerOne = ""
     var playerTwo = ""
@@ -17,7 +17,7 @@ class NamesViewController: UIViewController {
         super.viewDidLoad()
         
         playerOneField.delegate = self as? UITextFieldDelegate
-        playerOneField.delegate = self as? UITextFieldDelegate
+        PlayerTwoField.delegate = self as? UITextFieldDelegate
         self.getPlayerButton.layer.borderWidth = 4
         self.getPlayerButton.layer.borderColor = UIColor.black.cgColor
 
@@ -46,6 +46,16 @@ class NamesViewController: UIViewController {
 
     }
     
+    //Captures when return button is pressed
+    @IBAction func DoneButtonPressed(_ sender: Any) {
+        playerOneField.resignFirstResponder()
+    }
+    
+    //Captures when return button is pressed
+    @IBAction func DoneButtonTwoPressed(_ sender: Any) {
+        PlayerTwoField.resignFirstResponder()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard segue.identifier == "name" else {return} //identify button being pressed
@@ -59,7 +69,7 @@ extension ViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return false
+        return true
     }
 }
 

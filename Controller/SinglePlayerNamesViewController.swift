@@ -19,6 +19,11 @@ class SinglePlayerNamesViewController: UIViewController {
         playerNameTextField.delegate = self as? UITextFieldDelegate
     }
     
+    
+    @IBAction func returnButtonPressed(_ sender: Any) {
+        playerNameTextField.resignFirstResponder()
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         playerNameTextField.resignFirstResponder()
         self.view.endEditing(true)
