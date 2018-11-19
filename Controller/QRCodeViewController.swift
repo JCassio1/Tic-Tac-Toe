@@ -58,7 +58,9 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
        qrCodeImage.image = image
     }
     
-    func openingCamera(){
+    // MARK: User scans QR Code from own device
+    @IBAction func scanCode(_ sender: Any) {
+        
         //Creating session
         let session = AVCaptureSession()
         
@@ -92,12 +94,6 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         //self.view.bringSubview(toFront: square)
         
         session.startRunning()
-    }
-    
-    // MARK: User scans QR Code from own device
-    @IBAction func scanCode(_ sender: Any) {
-        
-        openingCamera()
     }
     
     
@@ -172,5 +168,4 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         }
         return retrievedData
     }
-
 }

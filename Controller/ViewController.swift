@@ -25,6 +25,25 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var gameStatus = [0,0,0,0,0,0,0,0,0]
     let winningPossibilities = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
     var activeGame = true
+    var checkUIView: Int = 0
+    
+    @IBOutlet weak var gameTopLabel: UILabel!
+    
+    @IBOutlet weak var tableButtons: UIButton!
+    
+    
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
+    @IBOutlet weak var thirdButton: UIButton!
+    @IBOutlet weak var fourthButton: UIButton!
+    @IBOutlet weak var fifthButton: UIButton!
+    @IBOutlet weak var sixthButton: UIButton!
+    @IBOutlet weak var seventhButton: UIButton!
+    @IBOutlet weak var eightButton: UIButton!
+    @IBOutlet weak var ninthButton: UIButton!
+    
+    
+    @IBOutlet weak var restart: UIButton! //Restart outlet (Code to UI)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +65,26 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         return sound
     }
     
+    func stateOfButtons(state: String){
+        
+        if state == "enable"{
+        
+            for index in 1...9{
+                let button = self.view.viewWithTag(index) as! UIButton
+                button.isEnabled = true
+            }
+        }
+        
+        else{
+            
+            for index in 1...9{
+                let button = self.view.viewWithTag(index) as! UIButton
+                button.isEnabled = false
+            }
+        }
+    }
     
-    @IBOutlet weak var gameTopLabel: UILabel!
+    
     
     // X and O Button in table
     @IBAction func buttonPressed(_ sender: AnyObject) {
@@ -109,11 +146,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                     if playerOneName.isEmpty == false {
                         gameTopLabel.text = "\(playerOneName) won!"
                         playerData(name: playerOneName, score: randomScore)
+                        stateOfButtons(state: "false")
+                        print("Disabled user interaction")
                     }
                     
                     else{
                         gameTopLabel.text = "Player 1 won!"
                         playerData(name: "player 1", score: randomScore)
+                        stateOfButtons(state: "false")
                     }
                     
                     if soundSetting == true {
@@ -126,11 +166,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                     if playerTwoName.isEmpty == false {
                         gameTopLabel.text = "\(playerTwoName) won!"
                         playerData(name: playerTwoName, score: randomScore)
+                        stateOfButtons(state: "false")
                     }
                         
                     else{
                         gameTopLabel.text = "Player 2 won!"
                         playerData(name: "player 2", score: randomScore)
+                        stateOfButtons(state: "false")
                     }
                     
                     if soundSetting == true {
@@ -138,12 +180,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                     }
                 }
                 
-                
                 restart.isHidden = false
                 gameTopLabel.isHidden = false
-                
             }
-            
         }
         
         activeGame = false
@@ -164,9 +203,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     
-    @IBOutlet weak var restart: UIButton! //Restart outlet (Code to UI)
+    
     
     @IBAction func restartGame(_ sender: Any) { //Restart action (UI to code)
+        
+        stateOfButtons(state: "enable")
         
         gameStatus = [0,0,0,0,0,0,0,0,0]
         activeGame = true
@@ -224,4 +265,3 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         self.savePlayers(player: newplayer)
     }
 }
-

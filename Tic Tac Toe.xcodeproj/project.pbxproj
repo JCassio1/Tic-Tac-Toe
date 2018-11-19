@@ -10,6 +10,7 @@
 		496088F0D0FB70E38BBC4A88 /* Pods_Tic_Tac_Toe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E417B6DE3149E5D04B179F1E /* Pods_Tic_Tac_Toe.framework */; };
 		9CA44572A93D9E5BD20C42F1 /* Pods_Tic_Tac_ToeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69EDE3A8C3A5547EDC81AA94 /* Pods_Tic_Tac_ToeUITests.framework */; };
 		A4392DB17717B8DD2DE5A606 /* Pods_Tic_Tac_ToeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C2488E8CACB2F73FF4349 /* Pods_Tic_Tac_ToeTests.framework */; };
+		F21D168F219CA4BF00E2693C /* singleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D168E219CA4BF00E2693C /* singleGameViewController.swift */; };
 		F2270D392194F99B001FFC9E /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2270D382194F99B001FFC9E /* StartupViewController.swift */; };
 		F2270D3B2194FAC5001FFC9E /* swift+gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2270D3A2194FAC5001FFC9E /* swift+gif.swift */; };
 		F24A310721925F3C0093F86B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24A310621925F3C0093F86B /* AppDelegate.swift */; };
@@ -61,6 +62,7 @@
 		A34E6067B9F07D3FA5E98ADB /* Pods-Tic Tac Toe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tic Tac Toe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tic Tac Toe/Pods-Tic Tac Toe.debug.xcconfig"; sourceTree = "<group>"; };
 		BDFF3E029E74741607917F08 /* Pods-Tic Tac ToeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tic Tac ToeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tic Tac ToeTests/Pods-Tic Tac ToeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E417B6DE3149E5D04B179F1E /* Pods_Tic_Tac_Toe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tic_Tac_Toe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21D168E219CA4BF00E2693C /* singleGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singleGameViewController.swift; sourceTree = "<group>"; };
 		F2270D382194F99B001FFC9E /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
 		F2270D3A2194FAC5001FFC9E /* swift+gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "swift+gif.swift"; sourceTree = "<group>"; };
 		F24A310321925F3C0093F86B /* Tic Tac Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +233,7 @@
 				F2DBF51C219867DD00C9DA29 /* sharingPlayerStatsViewController.swift */,
 				F25E0CC9219A467E0052B8E6 /* QRCodeViewController.swift */,
 				F25E0CCB219AD10A0052B8E6 /* QRCodeDataViewController.swift */,
+				F21D168E219CA4BF00E2693C /* singleGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			files = (
 				F2DBF51D219867DD00C9DA29 /* sharingPlayerStatsViewController.swift in Sources */,
 				F2DBF52121987DA200C9DA29 /* DataManager.swift in Sources */,
+				F21D168F219CA4BF00E2693C /* singleGameViewController.swift in Sources */,
 				F25E0CCA219A467E0052B8E6 /* QRCodeViewController.swift in Sources */,
 				F2B255B7219514C40014ED6B /* ScoreboardViewController.swift in Sources */,
 				F2DBF51B2197DD4800C9DA29 /* SinglePlayerNamesViewController.swift in Sources */,

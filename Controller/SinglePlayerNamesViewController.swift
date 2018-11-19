@@ -24,6 +24,13 @@ class SinglePlayerNamesViewController: UIViewController {
         playerNameTextField.resignFirstResponder()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard segue.identifier == "singlePlayer" else {return} //identify button being pressed
+        let vci = segue.destination as! singleGameViewController
+        vci.nameOfPlayer = self.playerNameTextField.text ?? ""
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         playerNameTextField.resignFirstResponder()
         self.view.endEditing(true)

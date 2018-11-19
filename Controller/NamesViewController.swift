@@ -20,7 +20,6 @@ class NamesViewController: UIViewController, UITextFieldDelegate {
         PlayerTwoField.delegate = self as? UITextFieldDelegate
         self.getPlayerButton.layer.borderWidth = 4
         self.getPlayerButton.layer.borderColor = UIColor.black.cgColor
-
     }
     
     
