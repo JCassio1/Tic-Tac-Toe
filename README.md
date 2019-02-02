@@ -4,12 +4,12 @@ This is a simple tic tac toe game developed by Joselson Dias
 
 ## What have I learnt
 
- Markup : 1. Create and Scan QR Codes
-              1. A nested numbered list
-              2. Which is numbered
-          2. Use multipeer connectivity
-          3. Table views specifically for scoreboards
-          4. Human vs Machine gameplay logic
+∙ Create and Scan QR Codes
+∙ A nested numbered list
+∙ Which is numbered
+∙ Use multipeer connectivity
+∙ Table views specifically for scoreboards
+∙ Human vs Machine gameplay logic
 
 ## Getting Started
 
