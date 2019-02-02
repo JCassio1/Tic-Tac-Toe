@@ -2,6 +2,15 @@
 
 This is a simple tic tac toe game developed by Joselson Dias
 
+## What have I learnt
+
+∙ Create and Scan QR Codes
+∙ Use multipeer connectivity
+∙ Table views specifically for scoreboards
+∙ Human vs Machine gameplay logic
+
+In order to install on your system you may just download the project and run on your xcode simulator or physical device.
+
 ## Getting Started
 
 In order to install on your system you may just download the project and run on your xcode simulator or physical device.
@@ -42,7 +51,3 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-Great appreciation to Angela Yu for having an uber rich app development bootcamp course
