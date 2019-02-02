@@ -4,10 +4,10 @@ This is a simple tic tac toe game developed by Joselson Dias
 
 ## What have I learnt
 
-∙ Create and Scan QR Codes
-∙ Use multipeer connectivity
-∙ Table views specifically for scoreboards
-∙ Human vs Machine gameplay logic
+1 Create and Scan QR Codes
+2 Use multipeer connectivity
+3 Table views specifically for scoreboards
+4 Human vs Machine gameplay logic
 
 In order to install on your system you may just download the project and run on your xcode simulator or physical device.
 
@@ -38,14 +38,13 @@ Code can be submitted to the app store by having an apple developer account and 
 * [Realm](https://realm.io) - Database
 
 
-
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/JCassio1/Tic-Tac-Toe). 
+For the versions available, see the [tags on this repository](https://github.com/JCassio1/Tic-Tac-Toe). 
 
 ## Authors
 
-* **Joselson Dias** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Joselson Dias** 
 
 
 ## License
