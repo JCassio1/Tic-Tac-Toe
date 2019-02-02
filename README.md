@@ -4,10 +4,10 @@ This is a simple tic tac toe game developed by Joselson Dias
 
 ## What have I learnt
 
- Markup : 1 Create and Scan QR Codes
-2 Use multipeer connectivity
-3 Table views specifically for scoreboards
-4 Human vs Machine gameplay logic
+ Markup : 1. Create and Scan QR Codes
+2. Use multipeer connectivity
+3. Table views specifically for scoreboards
+4. Human vs Machine gameplay logic
 
 In order to install on your system you may just download the project and run on your xcode simulator or physical device.
 
